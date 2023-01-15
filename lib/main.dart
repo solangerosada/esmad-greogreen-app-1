@@ -4,6 +4,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:geogreen/help_us.dart';
 import 'package:geogreen/informer.dart';
+import 'package:geogreen/notificatio_page.dart';
+
 //import '../widget/maps_wiget.dart';
 
 void main() {
@@ -151,7 +153,7 @@ class _FirstScreenState extends State<FirstScreen> {
     InformerPage(),
     HelpUsPage(),
     Center(child: Text('Location', style: _textStyle)),
-    Center(child: Text('Notification', style: _textStyle)),
+    Notification(),
     Center(child: Text('Profile', style: _textStyle)),
   ];
 
