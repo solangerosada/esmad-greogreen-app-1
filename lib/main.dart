@@ -1,10 +1,9 @@
 // ignore_for_file: use_key_in_widget_constructors
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:geogreen/help_us.dart';
 import 'package:geogreen/informer.dart';
-import 'package:geogreen/notificatio_page.dart';
+import 'package:geogreen/notification.dart';
 
 //import '../widget/maps_wiget.dart';
 
@@ -153,7 +152,7 @@ class _FirstScreenState extends State<FirstScreen> {
     InformerPage(),
     HelpUsPage(),
     Center(child: Text('Location', style: _textStyle)),
-    Notification(),
+    NotificationPage(),
     Center(child: Text('Profile', style: _textStyle)),
   ];
 

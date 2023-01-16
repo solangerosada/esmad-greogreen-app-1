@@ -1,0 +1,57 @@
+import 'package:flutter/material.dart';
+
+class NotificationPage extends StatefulWidget {
+  const NotificationPage({super.key});
+
+  @override
+  State<NotificationPage> createState() => _NotificationPageState();
+}
+
+class _NotificationPageState extends State<NotificationPage> {
+  List data = [
+    "New recycling bin!",
+    "Do not forget us!",
+    "Do you know that?",
+    "Together for the Planet!"
+  ];
+
+  List dados = [
+    "Near me there is a new ecopoint.",
+    "You haven't recycled anything this week...",
+    "Does a human being produce an average (...)",
+    "Thanks for using GeoGreen."
+  ];
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(title: Text('Notifications')),
+        body: ListView.builder(
+          itemCount: 4,
+          itemBuilder: (BuildContext context, int i) => Column(
+            children: <Widget>[
+              Container(
+                padding: EdgeInsets.symmetric(vertical: 12.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Container(
+                        padding: EdgeInsets.symmetric(
+                            horizontal: 15.0, vertical: 5.0),
+                        child: Text(
+                          data[i],
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 18.0),
+                        )),
+                    Container(
+                        padding: EdgeInsets.symmetric(
+                            horizontal: 15.0, vertical: 5.0),
+                        child: Text(dados[i])),
+                    Divider(color: Colors.black),
+                  ],
+                ),
+              )
+            ],
+          ),
+        ));
+  }
+}
