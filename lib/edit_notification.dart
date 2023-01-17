@@ -7,7 +7,7 @@ class EditNotification extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Center(
+          title: const Center(
         child: Text(
           'Notificatons',
         ),

@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:geogreen/edit_notification.dart';
-import 'package:geogreen/main.dart';
 import 'package:geogreen/security.dart';
 import 'package:geogreen/user_info.dart';
-import 'package:geogreen/widgets/profile_menu.dart';
 
 const user = "User Info";
 const security = "Security";
@@ -19,13 +17,13 @@ class Profile extends StatelessWidget {
       body: SafeArea(
           child: Column(
         children: <Widget>[
-          CircleAvatar(
+          const CircleAvatar(
             radius: 110,
             backgroundColor: Colors.teal,
             backgroundImage: NetworkImage(
                 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80'),
           ),
-          Text(
+          const Text(
             "Thamara Rey",
             style: TextStyle(
               fontSize: 30.0,
@@ -42,18 +40,18 @@ class Profile extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 50,
             width: 200,
             child: Divider(),
           ),
           Card(
             child: ListTile(
-              leading: Icon(
+              leading: const Icon(
                 Icons.person,
                 color: Colors.black,
               ),
-              title: Text('User Info'),
+              title: const Text('User Info'),
               onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => const UserInfo()));
@@ -62,11 +60,11 @@ class Profile extends StatelessWidget {
           ),
           Card(
             child: ListTile(
-              leading: Icon(
+              leading: const Icon(
                 Icons.lock,
                 color: Colors.black,
               ),
-              title: Text('Security'),
+              title: const Text('Security'),
               onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => const Security()));
@@ -75,11 +73,11 @@ class Profile extends StatelessWidget {
           ),
           Card(
             child: ListTile(
-              leading: Icon(
+              leading: const Icon(
                 Icons.notifications_active,
                 color: Colors.black,
               ),
-              title: Text('Notificatons'),
+              title: const Text('Notificatons'),
               onTap: () {
                 Navigator.push(
                     context,
@@ -90,11 +88,11 @@ class Profile extends StatelessWidget {
           ),
           Card(
             child: ListTile(
-              leading: Icon(
+              leading: const Icon(
                 Icons.logout,
                 color: Colors.black,
               ),
-              title: Text('Log Out'),
+              title: const Text('Log Out'),
               onTap: () {},
             ),
           )

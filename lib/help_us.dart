@@ -1,10 +1,6 @@
-import 'package:flutter/material.dart';
+import 'dart:html';
 
-const TextStyle _textStyle = TextStyle(
-    fontSize: 40,
-    fontWeight: FontWeight.bold,
-    letterSpacing: 2,
-    fontStyle: FontStyle.italic);
+import 'package:flutter/material.dart';
 
 class HelpUsPage extends StatelessWidget {
   //const Informer({super.key});
@@ -15,12 +11,13 @@ class HelpUsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          iconTheme: IconThemeData(color: Colors.teal),
+          iconTheme: const IconThemeData(color: Colors.teal),
           backgroundColor: Colors.white,
           // ignore: prefer_const_constructors
           title: Container(
-              margin: EdgeInsets.symmetric(horizontal: 1.0, vertical: 1.0),
-              decoration: BoxDecoration(
+              margin:
+                  const EdgeInsets.symmetric(horizontal: 1.0, vertical: 1.0),
+              decoration: const BoxDecoration(
                 color: Color.fromRGBO(151, 213, 179, 0.192),
                 borderRadius: BorderRadius.all(Radius.circular(22.0)),
               ),
@@ -29,7 +26,7 @@ class HelpUsPage extends StatelessWidget {
                   children: <Widget>[
                     Expanded(
                       child: TextFormField(
-                          decoration: InputDecoration(
+                          decoration: const InputDecoration(
                         border: InputBorder.none,
                         hintText: "     Search some adress",
                         suffixIcon: Icon(
@@ -40,7 +37,10 @@ class HelpUsPage extends StatelessWidget {
                     )
                   ]))),
       // ignore: prefer_const_constructors
-      body: GoogleMaps(),
+      body: Center(
+          child: Image(
+        image: AssetImage('assets/stefan.jpg'),
+      )),
     );
   }
 }

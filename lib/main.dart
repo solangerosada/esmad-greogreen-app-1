@@ -1,4 +1,4 @@
-// ignore_for_file: use_key_in_widget_constructors
+// ignore_for_file: use_key_in_widget_constructors, duplicate_ignore
 
 import 'package:flutter/material.dart';
 import 'package:geogreen/help_us.dart';
@@ -41,6 +41,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  // ignore: duplicate_ignore
   @override
   // ignore: dead_code, dead_code
   Widget build(BuildContext context) {
@@ -49,7 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
           backgroundColor: Colors.white,
           leading: IconButton(
             onPressed: () {},
-            icon: Icon(Icons.arrow_back_ios),
+            icon: const Icon(Icons.arrow_back_ios),
             color: Colors.blue,
           ),
           title: Text(widget.title),
@@ -59,11 +60,11 @@ class _MyHomePageState extends State<MyHomePage> {
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               Padding(
-                padding: EdgeInsets.all(24),
+                padding: const EdgeInsets.all(24),
                 child: Image.network(
                     'https://img.freepik.com/vetores-premium/homem-joga-garrafa-de-plastico-na-lata-de-lixo-sinal-de-reciclagem-de-lixo-o-conceito-de-cuidar-do-meio-ambiente-e-separar-o-lixo-reciclar-ilustracao-vetorial-de-estilo-de-vida-ecologico-homem-com-cesto-de-reciclagem_419010-294.jpg?w=1060'),
               ),
-              Center(
+              const Center(
                 child: Text(
                   'Welcome back',
                   style: TextStyle(
@@ -72,7 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
               ),
-              Center(
+              const Center(
                 child: Text(
                   'Insert your data and let´s go',
                   style: TextStyle(
@@ -80,7 +81,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.symmetric(vertical: 16, horizontal: 16),
                 child: TextField(
                   decoration: InputDecoration(
@@ -94,7 +95,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.symmetric(vertical: 16, horizontal: 16),
                 child: TextField(
                   decoration: InputDecoration(
@@ -109,21 +110,22 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
               Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
                   child: MaterialButton(
                     onPressed: () {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => FirstScreen()));
+                              builder: (context) => const FirstScreen()));
                     },
-                    child: Text(
+                    color: Colors.blue,
+                    child: const Text(
                       'LETS GO!',
                       style: TextStyle(
                         color: Colors.white,
                       ),
                     ),
-                    color: Colors.blue,
                   ))
             ],
           ),

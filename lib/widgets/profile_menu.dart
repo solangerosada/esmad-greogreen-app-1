@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class InfoCard extends StatelessWidget {
   // the values we need
   final String text;
   final IconData icon;
   Function onPressed;
 
-  InfoCard({required this.text, required this.icon, required this.onPressed});
+  InfoCard(
+      {super.key,
+      required this.text,
+      required this.icon,
+      required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +19,7 @@ class InfoCard extends StatelessWidget {
       // onTap: onPressed,
       child: Card(
         color: Colors.white,
-        margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+        margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 25),
         child: ListTile(
           leading: Icon(
             icon,
@@ -22,7 +27,7 @@ class InfoCard extends StatelessWidget {
           ),
           title: Text(
             text,
-            style: TextStyle(
+            style: const TextStyle(
                 color: Colors.teal,
                 fontSize: 20,
                 fontFamily: "Source Sans Pro"),

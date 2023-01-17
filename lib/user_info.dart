@@ -7,13 +7,13 @@ class UserInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Center(
+          title: const Center(
         child: Text(
           'User Information',
           maxLines: 3,
         ),
       )),
-      body: Padding(
+      body: const Padding(
         padding: EdgeInsets.symmetric(vertical: 16, horizontal: 16),
         child: TextField(
           decoration: InputDecoration(

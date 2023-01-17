@@ -7,7 +7,7 @@ class Security extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            title: Center(
+            title: const Center(
           child: Text(
             'Security',
             maxLines: 3,
@@ -16,7 +16,7 @@ class Security extends StatelessWidget {
         body: SingleChildScrollView(
             child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
-                children: <Widget>[
+                children: const <Widget>[
               Padding(
                 padding: EdgeInsets.symmetric(vertical: 16, horizontal: 16),
                 child: TextField(
