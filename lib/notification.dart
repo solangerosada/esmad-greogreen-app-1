@@ -24,7 +24,17 @@ class _NotificationPageState extends State<NotificationPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('Notifications')),
+        appBar: AppBar(
+            iconTheme: IconThemeData(color: Colors.teal),
+            backgroundColor: Colors.white,
+            // ignore: prefer_const_constructors
+            title: Center(
+              // ignore: prefer_const_constructors
+              child: Text(
+                'Notifications',
+                style: TextStyle(color: Colors.teal),
+              ),
+            )),
         body: ListView.builder(
           itemCount: 4,
           itemBuilder: (BuildContext context, int i) => Column(
@@ -46,7 +56,7 @@ class _NotificationPageState extends State<NotificationPage> {
                         padding: EdgeInsets.symmetric(
                             horizontal: 15.0, vertical: 5.0),
                         child: Text(dados[i])),
-                    Divider(color: Colors.black),
+                    Divider(color: Colors.teal),
                   ],
                 ),
               )

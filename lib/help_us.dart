@@ -15,26 +15,29 @@ class HelpUsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          backgroundColor: Colors.blue,
+          iconTheme: IconThemeData(color: Colors.teal),
+          backgroundColor: Colors.white,
+          // ignore: prefer_const_constructors
           title: Container(
-              margin: EdgeInsets.symmetric(horizontal: 5.0, vertical: 8.0),
+              margin: EdgeInsets.symmetric(horizontal: 1.0, vertical: 1.0),
               decoration: BoxDecoration(
-                color: Color.fromARGB(50, 255, 255, 255),
+                color: Color.fromRGBO(151, 213, 179, 0.192),
                 borderRadius: BorderRadius.all(Radius.circular(22.0)),
               ),
               child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: <Widget>[
                     Expanded(
-                        child: TextFormField(
-                      decoration: InputDecoration(
-                          border: InputBorder.none,
-                          hintText: "Search some adress",
-                          icon: Icon(
-                            Icons.search,
-                            color: Colors.black,
-                          )),
-                    ))
+                      child: TextFormField(
+                          decoration: InputDecoration(
+                        border: InputBorder.none,
+                        hintText: "     Search some adress",
+                        suffixIcon: Icon(
+                          Icons.search,
+                          color: Colors.teal,
+                        ),
+                      )),
+                    )
                   ]))),
       // ignore: prefer_const_constructors
       body: Center(child: const Text('Help Us', style: _textStyle)),

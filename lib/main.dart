@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:geogreen/help_us.dart';
 import 'package:geogreen/informer.dart';
 import 'package:geogreen/notification.dart';
+import 'package:geogreen/profile.dart';
 
 //import '../widget/maps_wiget.dart';
 
@@ -153,7 +154,7 @@ class _FirstScreenState extends State<FirstScreen> {
     HelpUsPage(),
     Center(child: Text('Location', style: _textStyle)),
     NotificationPage(),
-    Center(child: Text('Profile', style: _textStyle)),
+    Profile()
   ];
 
   @override
@@ -170,7 +171,9 @@ class _FirstScreenState extends State<FirstScreen> {
           },
           destinations: const [
             NavigationDestination(
-              selectedIcon: Icon(Icons.space_dashboard_outlined),
+              selectedIcon: Icon(
+                Icons.space_dashboard_outlined,
+              ),
               icon: Icon(Icons.space_dashboard_outlined),
               label: 'Informer',
             ),

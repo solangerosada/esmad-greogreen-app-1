@@ -7,12 +7,17 @@ class InformerPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+          iconTheme: IconThemeData(color: Colors.teal),
+          backgroundColor: Colors.white,
+          // ignore: prefer_const_constructors
           title: Center(
-        child: Text(
-          'What do you want to throw away?',
-          maxLines: 3,
-        ),
-      )),
+            // ignore: prefer_const_constructors
+            child: Text(
+              'What do you want to throw away?',
+              style: TextStyle(color: Colors.teal),
+              maxLines: 3,
+            ),
+          )),
       body: Container(
         child: Padding(
             padding: EdgeInsets.all(24),
