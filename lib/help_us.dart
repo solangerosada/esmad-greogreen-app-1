@@ -40,7 +40,7 @@ class HelpUsPage extends StatelessWidget {
                     )
                   ]))),
       // ignore: prefer_const_constructors
-      body: Center(child: const Text('Help Us', style: _textStyle)),
+      body: GoogleMaps(),
     );
   }
 }
