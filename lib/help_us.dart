@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 
 class HelpUsPage extends StatelessWidget {
@@ -38,7 +36,7 @@ class HelpUsPage extends StatelessWidget {
                   ]))),
       // ignore: prefer_const_constructors
       body: Center(
-          child: Image(
+          child: const Image(
         image: AssetImage('assets/stefan.jpg'),
       )),
     );
