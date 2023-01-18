@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 //import 'info_page.dart';
 import 'package:geogreen/info_page.dart';
+import 'package:flutter_map/flutter_map.dart';
+import 'package:latlong2/latlong.dart';
 
 class LocationPage extends StatelessWidget {
   const LocationPage({super.key});
@@ -36,7 +38,18 @@ class LocationPage extends StatelessWidget {
                     )
                   ]))),
       // ignore: prefer_const_constructors
-      body: Container(
+      body: FlutterMap(
+        options: MapOptions(
+          center: LatLng(41.36655, -8.73872),
+          zoom: 14,
+        ),
+        children: [
+          TileLayer(
+            urlTemplate: "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+            userAgentPackageName: 'dev.fleaflet.flutter_map.example',
+          ),
+        ],
+        /*
         alignment: Alignment.center,
         // ignore: prefer_const_constructors
         decoration: BoxDecoration(
@@ -46,6 +59,7 @@ class LocationPage extends StatelessWidget {
               'https://www.mapav.com/images/m/mapa/vila-do-conde.png'),
           fit: BoxFit.cover,
         )),
+        */
       ),
 
       floatingActionButton: FloatingActionButton(
