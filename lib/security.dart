@@ -7,12 +7,14 @@ class Security extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+            iconTheme: IconThemeData(color: Colors.teal),
+            backgroundColor: Colors.white,
             title: const Center(
-          child: Text(
-            'Security',
-            maxLines: 3,
-          ),
-        )),
+              child: Text(
+                'Security',
+                style: TextStyle(color: Colors.teal),
+              ),
+            )),
         body: SingleChildScrollView(
             child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -24,7 +26,7 @@ class Security extends StatelessWidget {
                     labelText: 'Password',
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: Colors.blue,
+                        color: Colors.teal,
                       ),
                     ),
                   ),
@@ -37,7 +39,7 @@ class Security extends StatelessWidget {
                     labelText: 'Confirm Password',
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: Colors.blue,
+                        color: Colors.teal,
                       ),
                     ),
                   ),

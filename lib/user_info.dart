@@ -7,12 +7,14 @@ class UserInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+          iconTheme: IconThemeData(color: Colors.teal),
+          backgroundColor: Colors.white,
           title: const Center(
-        child: Text(
-          'User Information',
-          maxLines: 3,
-        ),
-      )),
+            child: Text(
+              'User Information',
+              style: TextStyle(color: Colors.teal),
+            ),
+          )),
       body: const Padding(
         padding: EdgeInsets.symmetric(vertical: 16, horizontal: 16),
         child: TextField(
@@ -20,7 +22,7 @@ class UserInfo extends StatelessWidget {
             labelText: 'Nome',
             enabledBorder: OutlineInputBorder(
               borderSide: BorderSide(
-                color: Colors.blue,
+                color: Colors.teal,
               ),
             ),
           ),

@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:geogreen/help_us.dart';
 import 'package:geogreen/informer.dart';
+import 'package:geogreen/location.dart';
 import 'package:geogreen/notification.dart';
 import 'package:geogreen/profile.dart';
 
@@ -133,14 +134,6 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-const TextStyle _textStyle = TextStyle(
-    fontSize: 40,
-    fontWeight: FontWeight.bold,
-    letterSpacing: 2,
-    fontStyle: FontStyle.italic);
-
-//-------First PAGE -----------
-
 class FirstScreen extends StatefulWidget {
   const FirstScreen({super.key});
 
@@ -154,7 +147,7 @@ class _FirstScreenState extends State<FirstScreen> {
   final pages = const [
     InformerPage(),
     HelpUsPage(),
-    Center(child: Text('Location', style: _textStyle)),
+    LocationPage(),
     NotificationPage(),
     Profile()
   ];

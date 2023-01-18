@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:geogreen/descrition.dart';
 
 class InformerPage extends StatelessWidget {
   const InformerPage({super.key});
@@ -34,10 +35,30 @@ class InformerPage extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Image.network(
-                      'https://elements-cover-images-0.imgix.net/cb0557fb-0859-4837-8cf5-16d897ec6886?auto=compress%2Cformat&fit=max&w=1170&s=194161298dd9e2ca4fe808c9b833a15f',
-                      scale: 0.5,
-                    )
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Descristion()));
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                            border: Border.all(
+                                width: 2.0, color: const Color(0xFFFFFFFF)),
+                            borderRadius: BorderRadius.circular(20),
+                            color: Colors.white),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.network(
+                              'https://img.freepik.com/premium-vector/damaged-cardboard-box-wet-broken-parcel-puddle-floor-isometric-vector-illustration_168129-1447.jpg?w=2000',
+                              scale: 0.5,
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),
