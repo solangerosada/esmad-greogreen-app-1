@@ -118,7 +118,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const FirstScreen()));
+                              builder: (context) => const BottomMenu()));
                     },
                     color: Colors.blue,
                     child: const Text(
@@ -134,14 +134,14 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-class FirstScreen extends StatefulWidget {
-  const FirstScreen({super.key});
+class BottomMenu extends StatefulWidget {
+  const BottomMenu({super.key});
 
   @override
-  State<FirstScreen> createState() => _FirstScreenState();
+  State<BottomMenu> createState() => _BottomMenuState();
 }
 
-class _FirstScreenState extends State<FirstScreen> {
+class _BottomMenuState extends State<BottomMenu> {
   int index = 0;
 
   final pages = const [
